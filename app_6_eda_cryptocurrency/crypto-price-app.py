@@ -5,8 +5,8 @@ import pandas as pd
 import base64
 import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
-from numpy as np
-
+import numpy as np
+import seaborn as sns
 import requests
 import json
 import time
@@ -32,7 +32,7 @@ This app retrieves cryptocurrency prices for the top 100 cryptocurrency from the
 """)
 #---------------------------------#
 # About
-expander_bar = st.beta_expander("About")
+expander_bar = st.expander("About")
 expander_bar.markdown("""
 * **Python libraries:** base64, pandas, streamlit, numpy, matplotlib, seaborn, BeautifulSoup, requests, json, time
 * **Data source:** [CoinMarketCap](http://coinmarketcap.com).
@@ -44,7 +44,7 @@ expander_bar.markdown("""
 # Page layout (continued)
 ## Divide page to 3 columns (col1 = sidebar, col2 and col3 = page contents)
 col1 = st.sidebar
-col2, col3 = st.beta_columns((2,1))
+col2, col3 = st.columns((2,1))
 
 #---------------------------------#
 # Sidebar + Main panel
